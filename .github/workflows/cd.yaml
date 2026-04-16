@@ -37,10 +37,8 @@ jobs:
           script: |
             cd /root/Nginx
             
-            chmod +x mvnw *.sh
-            
-            ./linux-docker-down.sh
-            ./linux-docker-start.sh
+            ./linux-docker-down-v.sh
+            ./linux-docker-up.sh
             
             docker image prune -f
             docker ps
