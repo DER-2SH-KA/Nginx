@@ -1,0 +1,14 @@
+services:
+  nginx:
+    image: nginx:mainline-alpine3.23
+    container_name: nginx
+    hostname: nginx
+    deploy:
+      resources:
+        limits:
+          memory: 100m
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 10s

@@ -1,0 +1,1 @@
+docker compose -p nginx down -v
