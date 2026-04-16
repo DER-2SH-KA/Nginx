@@ -38,7 +38,7 @@ jobs:
             cd /root/Nginx
             
             ./linux-docker-down-v.sh
-            ./linux-docker-up.sh
+            ./linux-docker-up-prod.sh
             
             docker image prune -f
             docker ps

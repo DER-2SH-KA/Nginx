@@ -1,1 +1,1 @@
-docker compose -p nginx up -d
+docker compose -p nginx -f docker-compose.yaml -f docker-compose.dev.yaml up -d
