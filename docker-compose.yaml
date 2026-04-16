@@ -3,6 +3,8 @@ services:
     image: nginx:mainline-alpine3.23
     container_name: nginx
     hostname: nginx
+    networks:
+      - nginx_network
     deploy:
       resources:
         limits:
@@ -12,3 +14,7 @@ services:
         delay: 5s
         max_attempts: 3
         window: 10s
+
+networks:
+  nginx_network:
+    external: true
